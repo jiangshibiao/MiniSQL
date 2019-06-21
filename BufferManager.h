@@ -25,9 +25,6 @@ class BFM;
 
 struct Block {
 	public:
-		char data[BLOCKSIZE];
-		string fileName;
-		int offset, num;
 		Block(string _fileName, int _offset, int _num) {
 			num = _num;
 			memset(data, 0, BLOCKSIZE);
@@ -35,6 +32,9 @@ struct Block {
 			fileName = _fileName;
 		}
 	private:
+		char data[BLOCKSIZE];
+		string fileName;
+		int offset, num;
 		friend BFM;
 };
 

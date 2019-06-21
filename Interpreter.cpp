@@ -43,7 +43,6 @@ string Interpreter::TryCreateTable(string cur) {
 		int space = block.find(' ');
 		if (space == -1) return "Fail! Find no spacce to split type and name.";
 		strcpy(now.name, strip(block.substr(0, space)).c_str());
-
 		string type = reduce(block.substr(space + 1));
 		if (type == "int") now.tp = INT;
 		else if (type == "float") now.tp = FLOAT;
